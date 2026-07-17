@@ -1,0 +1,24 @@
+aid: flanks
+name: Flanks
+description: Flanks is a company surfaced as a portfolio company of battery-ventures, earlybird and added
+  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
+  pipeline.
+url: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/apis.yml
+x-type: company
+x-source: vc-portfolio
+x-backed-by:
+- battery-ventures
+- earlybird
+x-tier: stub
+x-tier-reason: portfolio-lead
+specificationVersion: '0.20'
+created: '2026-07-17'
+modified: '2026-07-17'
+tags:
+- Company
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
