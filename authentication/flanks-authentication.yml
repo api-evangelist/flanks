@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flanks.io/pages/flanks-apis/authentication/
+docs: https://docs.flanks.io/pages/flanks-apis/authentication/
+summary:
+  types: [oauth2]
+  oauth2_flows: [clientCredentials]
+  bearer: true
+schemes:
+  - name: OAuth2ClientCredentials
+    type: oauth2
+    flow: clientCredentials
+    token_endpoint: https://api.flanks.io/v0/token
+    grant_type: client_credentials
+    request:
+      method: POST
+      content_type: application/json
+      parameters:
+        - client_id
+        - client_secret
+        - grant_type
+    response:
+      access_token: string
+      token_type: Bearer
+      expires_in: 3600
+      scope: space-delimited list of scopes
+    usage: 'Every request carries header Authorization: Bearer <access_token>'
+notes: >-
+  All Flanks API calls must be authenticated. Obtain a bearer access token from
+  the token endpoint using the OAuth2 client-credentials grant, then send it in
+  the Authorization header. Access tokens expire after 3600 seconds. The hosted
+  Flanks MCP server uses a separate OAuth2 authorization server
+  (https://flanks-mcp.flanks.io) supporting authorization_code, refresh_token,
+  and client_credentials with PKCE (S256).
