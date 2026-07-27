@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source:
+  - https://registry.npmjs.org/flanks
+  - https://pypi.org/pypi/flanks/json
+packages:
+  - language: javascript
+    registry: npm
+    name: flanks
+    url: https://www.npmjs.com/package/flanks
+    repository: https://github.com/flanksio/flanks-node
+    install: npm install flanks
+    description: Node.js client for the Flanks API.
+    version: 0.1.1
+    official: true
+  - language: python
+    registry: pypi
+    name: flanks
+    url: https://pypi.org/project/flanks/
+    repository: https://github.com/flanks-io/python-flanks
+    install: pip install flanks
+    description: Python client for the Flanks API.
+    author: Flanks Team
+    official: true
+notes: >-
+  Both clients are published from Flanks GitHub organizations (flanksio /
+  flanks-io). No first-party Java, .NET, Go, Ruby, PHP, or Rust SDK was found.

@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source:
+  - https://docs.flanks.io/pages/flanks-apis/connect-api/v2/
+  - https://docs.flanks.io/pages/changelog/
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://docs.flanks.io/pages/flanks-apis/connect-api/v2/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecated_apis:
+    - name: Flanks Link
+      note: Legacy Link flow superseded by Connect API v2.
+    - name: Links API
+      note: Legacy Links API, superseded by Connect API v2.
+sla:
+  url: null
+status_page: null
+notes: >-
+  Flanks versions its APIs in the URI path (v0 token endpoint, connect/v2).
+  Legacy Flanks Link and Links API are documented as deprecated in favor of the
+  Connect API v2. No formal deprecation-policy page, Sunset-header support, SLA,
+  or public status page was found.

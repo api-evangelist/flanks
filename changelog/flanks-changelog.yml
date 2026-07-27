@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flanks.io/pages/changelog/
+scheme: dated
+current_version: Connect API v2
+entries:
+  - date: '2026-06-05'
+    breaking: false
+    highlights:
+      - Expanded Flanks MCP docs with ChatGPT setup, programmatic access (OpenAI & Anthropic APIs), and machine-to-machine (M2M) access.
+  - date: '2026-05-05'
+    breaking: false
+    highlights:
+      - Introduced privacy_notice attribute in Connect API Session Configuration.
+  - date: '2026-04-29'
+    breaking: false
+    highlights:
+      - Added initial_step attribute in Connect API Session Configuration.
+  - date: '2026-04-23'
+    breaking: false
+    highlights:
+      - Released new Flanks MCP documentation page.
+  - date: '2026-04-08'
+    breaking: false
+    highlights:
+      - Published dedicated ConnectorFilter specification, added to Connect API Session Configuration.
+  - date: '2025-11-17'
+    breaking: false
+    highlights:
+      - Integration documentation updated to reflect new usage via Connect API v2.

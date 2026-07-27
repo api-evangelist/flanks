@@ -1,24 +1,138 @@
 aid: flanks
 name: Flanks
-description: Flanks is a company surfaced as a portfolio company of battery-ventures, earlybird and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Flanks is an AI-powered wealth data platform, headquartered in Barcelona with
+  offices in Madrid, Paris, and London, that aggregates and standardizes
+  investment and banking data from 700+ financial institutions into a single
+  unified model. It serves financial advisors, banks, family offices, and asset
+  managers through its Aggregate and Lume modules, processing millions of
+  portfolios monthly across the EU. The Flanks API exposes an OAuth2-secured
+  Connect flow (link accounts, resolve MFA/SCA challenges), plus Credentials,
+  Entities, Aggregation, and Letters APIs that return portfolios, investments,
+  accounts, liabilities, cards, and their transactions. A hosted Model Context
+  Protocol (MCP) server gives AI assistants direct, OAuth-secured access to the
+  same multi-bank investment data.
 url: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/66d71d258c24eef64e16030e/66e002e85abba93409df5c36_flanks-opengrapfh.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
 - earlybird
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Wealth Management
+- Financial Data
+- Data Aggregation
+- Fintech
+- Investments
+- Open Banking
+- APIs
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Flanks API
+  description: >-
+    OAuth2-secured wealth-data API covering the Connect flow (connectors,
+    sessions, SCA resolution), Credentials, Entities, Aggregation, and Letters,
+    returning standardized portfolios, investments, accounts, liabilities, and
+    cards from 700+ financial institutions.
+  humanURL: https://docs.flanks.io/
+  baseURL: https://api.flanks.io
+  tags:
+  - Wealth Management
+  - Financial Data
+  - Aggregation
+  properties:
+  - type: Authentication
+    url: authentication/flanks-authentication.yml
+  - type: Documentation
+    url: https://docs.flanks.io/
+  - type: APIReference
+    url: https://docs.flanks.io/pages/flanks-apis/connect-api/v2/
+  - type: GettingStarted
+    url: https://docs.flanks.io/pages/integration-example/
+common:
+- type: DeveloperPortal
+  url: https://docs.flanks.io/
+- type: Documentation
+  url: https://docs.flanks.io/
+- type: APIReference
+  url: https://docs.flanks.io/pages/flanks-apis/connect-api/v2/
+- type: GettingStarted
+  url: https://docs.flanks.io/pages/integration-example/
+- type: Authentication
+  url: authentication/flanks-authentication.yml
+- type: MCPServer
+  url: mcp/flanks-mcp.yml
+- type: WellKnown
+  url: well-known/flanks-well-known.yml
+- type: SecurityTxt
+  url: well-known/flanks-security.txt
+- type: VulnerabilityDisclosure
+  url: security/flanks-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.flanks.io/responsible-disclosure
+- type: TrustCenter
+  url: https://www.flanks.io/security-and-privacy
+- type: Compliance
+  url: https://www.flanks.io/security-and-privacy
+- type: Conformance
+  url: conformance/flanks-conformance.yml
+- type: DomainSecurity
+  url: security/flanks-domain-security.yml
+- type: Conventions
+  url: conventions/flanks-conventions.yml
+- type: ChangeLog
+  url: changelog/flanks-changelog.yml
+- type: ErrorCatalog
+  url: errors/flanks-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/flanks-lifecycle.yml
+- type: Sandbox
+  url: sandbox/flanks-sandbox.yml
+- type: DataModel
+  url: data-model/flanks-data-model.yml
+- type: Packages
+  url: packages/flanks-packages.yml
+- type: SDKs
+  url: packages/flanks-packages.yml
+- type: LLMsTxt
+  url: llms/flanks-llms.txt
+- type: Blog
+  url: https://www.flanks.io/blog
+- type: Support
+  url: https://www.flanks.io/customer-service
+- type: Login
+  url: https://platform.flanks.io
+- type: TermsOfService
+  url: https://www.flanks.io/terms-conditions
+- type: PrivacyPolicy
+  url: https://www.flanks.io/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/flanksio
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

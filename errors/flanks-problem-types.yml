@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flanks.io/pages/flanks-apis/connect-api/v2/
+format: custom
+envelope: '{"success": false, "error": {"code": "<Code>", "details": [...]}}'
+trace_field: trace_id
+problems:
+  - status: 400
+    code: ValidationError
+    title: Validation error
+    envelope: '{"success": false, "error": {"code": "ValidationError", "details": [...]}}'
+    remediation: Correct the request body/parameters flagged in error.details.
+  - status: 401
+    code: InvalidCredentials
+    title: Invalid credentials
+    envelope: '{"error": "Invalid credentials"}'
+    remediation: Obtain a fresh bearer token from https://api.flanks.io/v0/token and retry.
+  - status: 500
+    code: InternalError
+    title: Internal error
+    envelope: '{"error": "Internal Error"}'
+    remediation: Retry with backoff; contact support@flanks.io with the trace_id if it persists.
+notes: >-
+  Flanks does not use RFC 9457 application/problem+json. Validation errors carry
+  a trace_id for support correlation. TestBank exposes additional simulated
+  error conditions (see sandbox/flanks-sandbox.yml).

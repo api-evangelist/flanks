@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: probed /.well-known/ on api.flanks.io, www.flanks.io, flanks-mcp.flanks.io
+hosts:
+  - host: https://api.flanks.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: flanks-security.txt
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://www.flanks.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://flanks-mcp.flanks.io
+    documents:
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: flanks-oauth-authorization-server.json
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        file: flanks-oauth-protected-resource.json
+      - path: /.well-known/openid-configuration
+        status: 404

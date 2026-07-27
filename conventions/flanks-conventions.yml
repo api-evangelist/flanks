@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source:
+  - https://docs.flanks.io/pages/flanks-apis/connect-api/v2/
+  - https://docs.flanks.io/pages/flanks-apis/authentication/
+  - https://docs.flanks.io/pages/flanks-apis/request-encryption/
+authentication:
+  style: oauth2-bearer
+  header: 'Authorization: Bearer <access_token>'
+  detail: authentication/flanks-authentication.yml
+content_type: application/json
+idempotency:
+  supported: false
+  note: No idempotency-key header/parameter is documented.
+pagination:
+  style: cursor
+  request_param: page_token
+  response_field: next_page_token
+  detail: >-
+    Paginated endpoints return next_page_token (string or null); pass it back as
+    page_token to fetch the next page.
+error_envelope:
+  shape: '{"success": false, "error": {"code": "<Code>", "details": [...]}}'
+  trace_field: trace_id
+  detail: errors/flanks-problem-types.yml
+request_encryption:
+  supported: true
+  docs: https://docs.flanks.io/pages/flanks-apis/request-encryption/
+  note: Sensitive request payloads (e.g. credentials) can be encrypted before transmission.
+versioning:
+  style: uri-path
+  current: v2
+  detail: lifecycle/flanks-lifecycle.yml
+rate_limit_signaling:
+  documented: false

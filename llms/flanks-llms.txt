@@ -1,0 +1,36 @@
+# Flanks
+
+> Flanks is an AI-powered wealth data platform that aggregates and standardizes investment and banking data from 700+ financial institutions into a unified model for financial advisors, banks, family offices, and asset managers. The Flanks API exposes the Connect flow (link accounts, resolve MFA/SCA), credential and entity management, and aggregation of portfolios, investments, accounts, liabilities, and cards. A hosted Model Context Protocol (MCP) server gives AI assistants direct, OAuth-secured access to the same investment data.
+
+## APIs
+- [Flanks API Documentation](https://docs.flanks.io/): Developer docs for the Flanks Connect, Entities, Credentials, Aggregation, and Letters APIs.
+- [Authentication](https://docs.flanks.io/pages/flanks-apis/authentication/): OAuth2 client-credentials; token endpoint https://api.flanks.io/v0/token.
+- [Connect API v2](https://docs.flanks.io/pages/flanks-apis/connect-api/v2/): Base https://api.flanks.io/connect/v2 — connectors, sessions, SCA resolution.
+- [Entities API](https://docs.flanks.io/pages/flanks-apis/entities-api/)
+- [Credentials API](https://docs.flanks.io/pages/flanks-apis/credentials-api/)
+- [Aggregation API](https://docs.flanks.io/pages/flanks-apis/aggregation-api/)
+- [Letters API](https://docs.flanks.io/pages/flanks-apis/letters-api/)
+- [Request Encryption](https://docs.flanks.io/pages/flanks-apis/request-encryption/)
+
+## Agents
+- [Flanks MCP Server](https://docs.flanks.io/pages/flanks-mcp/): Hosted MCP at https://flanks-mcp.flanks.io/mcp (OAuth2, 10 tools for connect, credentials, and portfolio/investment data).
+
+## Docs
+- [Concepts](https://docs.flanks.io/pages/concepts/)
+- [Integration Example](https://docs.flanks.io/pages/integration-example/)
+- [Data Model](https://docs.flanks.io/pages/data-model/)
+- [Connect Sessions](https://docs.flanks.io/pages/connect-sessions/)
+- [TestBank (test environment)](https://docs.flanks.io/pages/testbank/)
+- [Changelog](https://docs.flanks.io/pages/changelog/)
+
+## SDKs
+- [flanks (npm)](https://www.npmjs.com/package/flanks): Node.js client — https://github.com/flanksio/flanks-node
+- [flanks (PyPI)](https://pypi.org/project/flanks/): Python client — https://github.com/flanks-io/python-flanks
+
+## Company
+- [Flanks](https://www.flanks.io/): AI wealth data platform, Barcelona.
+- [Security & Privacy](https://www.flanks.io/security-and-privacy): SOC 2 Type II, SOC 3, GDPR.
+- [Blog](https://www.flanks.io/blog)
+- [Contact](https://www.flanks.io/contact)
+- [Terms & Conditions](https://www.flanks.io/terms-conditions)
+- [Privacy Policy](https://www.flanks.io/privacy-policy)

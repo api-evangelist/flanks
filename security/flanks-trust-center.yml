@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+url: https://www.flanks.io/security-and-privacy
+certifications:
+  - SOC 2 Type II
+  - SOC 3
+  - GDPR
+program:
+  soc2: 'Certified SOC 2 Type II, audited annually.'
+  soc3: '2026 SOC 3 report referenced.'
+  gdpr: 'Committed to GDPR compliance.'
+  encryption: 'Data encrypted at rest and in transit using industry-standard protocols.'
+  key_management: 'Cryptography policy governs encryption key management.'
+  infrastructure: 'Hosted on Google Cloud with firewalls, IDS, and DDoS protection.'
+  audit_reports: 'Audit certifications provided upon request to clients or providers.'
+evidence:
+  - source: https://www.flanks.io/security-and-privacy
+    keywords: [soc 2 type ii, soc 3, gdpr, encryption at rest, encryption in transit]
+notes: >-
+  No ISO 27001 or PCI DSS certification claimed. No dedicated trust.flanks.io
+  portal; security posture is documented on the security-and-privacy page.

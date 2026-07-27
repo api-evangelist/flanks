@@ -1,0 +1,65 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://docs.flanks.io/pages/flanks-mcp/
+server:
+  name: flanks
+  description: >-
+    Model Context Protocol server giving AI assistants direct access to
+    multi-bank investment data through Flanks. Covers the Connect flow,
+    credential management, and portfolio/investment data retrieval.
+  transport: http
+  streaming: sse
+  url: https://flanks-mcp.flanks.io/mcp
+auth:
+  type: oauth2
+  authorization_server: https://flanks-mcp.flanks.io
+  authorization_endpoint: https://flanks-mcp.flanks.io/authorize
+  token_endpoint: https://flanks-mcp.flanks.io/token
+  registration_endpoint: https://flanks-mcp.flanks.io/register
+  revocation_endpoint: https://flanks-mcp.flanks.io/token/revoke
+  grant_types: [authorization_code, refresh_token, client_credentials]
+  pkce: S256
+  access_token_ttl_seconds: 3600
+  refresh_token_ttl_days: 30
+tools:
+  - name: flanks-connectors
+    group: connect-flow
+    description: List available financial-institution connectors.
+    readonly: true
+  - name: flanks-create-connect-session
+    group: connect-flow
+    description: Create a Connect session for linking a bank account.
+    readonly: true
+  - name: flanks-session-status
+    group: connect-flow
+    description: Check the status of a Connect session.
+    readonly: true
+  - name: flanks-credentials
+    group: credential-management
+    description: List stored credentials.
+    readonly: true
+  - name: flanks-credential-status
+    group: credential-management
+    description: Get the status of a credential connection.
+    readonly: true
+  - name: flanks-needs-relogin
+    group: credential-management
+    description: Check whether a credential requires re-authentication.
+    readonly: true
+  - name: flanks-delete-credentials
+    group: credential-management
+    description: Delete stored credentials (destructive; requires explicit confirmation).
+    readonly: false
+  - name: flanks-portfolios
+    group: portfolio-data
+    description: Retrieve portfolios for a credential.
+    readonly: true
+  - name: flanks-investments
+    group: portfolio-data
+    description: Retrieve investment holdings.
+    readonly: true
+  - name: flanks-investment-transactions
+    group: portfolio-data
+    description: Retrieve investment transactions.
+    readonly: true

@@ -1,0 +1,5 @@
+Canonical: https://flanks.io/.well-known/security.txt
+Contact: mailto:security@flanks.io
+Expires: 2027-06-16T12:00:00Z
+Policy: https://www.flanks.io/responsible-disclosure
+Preferred-Languages: en, es

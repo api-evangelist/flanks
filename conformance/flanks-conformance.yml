@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source:
+  - https://docs.flanks.io/pages/flanks-apis/authentication/
+  - https://www.flanks.io/security-and-privacy
+  - https://docs.flanks.io/pages/testbank/
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: OAuth2 client-credentials flow at https://api.flanks.io/v0/token
+  - id: oauth2-authorization-code
+    conforms: true
+    evidence: Flanks MCP authorization server supports authorization_code + PKCE (S256)
+  - id: rfc9116-security-txt
+    conforms: true
+    evidence: /.well-known/security.txt published at api.flanks.io
+  - id: rfc8414-oauth-authorization-server-metadata
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server published at flanks-mcp.flanks.io
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: errors use a custom {success,error{code,details}} envelope, not application/problem+json
+  - id: psd2-sca
+    conforms: true
+    evidence: Connect flow resolves SCA/MFA challenges (SCA_SMS, SCA_APP, SCA_CODE) per PSD2 strong customer authentication
+  - id: soc2-type-ii
+    conforms: true
+    evidence: SOC 2 Type II certified, audited annually (security-and-privacy page)
+  - id: gdpr
+    conforms: true
+    evidence: GDPR compliance stated on security-and-privacy page
+  - id: mcp
+    conforms: true
+    evidence: hosted Model Context Protocol server at https://flanks-mcp.flanks.io/mcp

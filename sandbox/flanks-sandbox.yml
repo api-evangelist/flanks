@@ -1,0 +1,36 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flanks.io/pages/testbank/
+name: TestBank
+description: >-
+  TestBank is a fictional financial institution connector for exercising the
+  Flanks Connect flow. Behaviour is driven by special trigger values entered in
+  the credential password field and in the SCA challenge input; there is no
+  separate sandbox base URL.
+credential_password_triggers:
+  - value: ALREADY_EXISTS
+    effect: Simulates duplicate-credential detection.
+  - value: DATA_ERROR_PRODUCT_ACCOUNT
+    effect: Returns data errors in the accounts field.
+  - value: INVALID_CREDENTIALS
+    effect: Triggers an authentication failure.
+  - value: INTERNAL_ERROR
+    effect: Simulates a server error.
+  - value: SCA_SMS
+    effect: Triggers an SMS-based strong customer authentication challenge.
+  - value: SCA_APP
+    effect: Triggers an app-based SCA challenge.
+  - value: SCA_CODE
+    effect: Triggers a code-based SCA challenge.
+sca_challenge_triggers:
+  - value: INVALID_SCA
+    effect: Returns an authentication error.
+  - value: INTERNAL_ERROR
+    effect: Simulates a server failure.
+  - value: USER_INTERACTION_NEEDED
+    effect: Prompts for additional user action.
+notes: >-
+  Chain challenges by entering the corresponding special password on the
+  challenge input field. No fixed test username/password pairs or separate
+  sandbox host are published; TestBank runs against the production Connect flow
+  using these reserved trigger strings.

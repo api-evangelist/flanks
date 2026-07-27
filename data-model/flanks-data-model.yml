@@ -1,0 +1,72 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flanks.io/pages/data-model/
+entities:
+  - name: Portfolio
+    description: Top-level container for investments; type derived from holdings, balance is current valuation.
+    fields: [portfolio_id, type, balance]
+  - name: Investment
+    description: Security holding within a portfolio.
+    fields: [portfolio_id, isin, amount, balance, currency]
+  - name: InvestmentTransaction
+    description: Trade / fund flow against an investment.
+    fields: [investment_id, refValos]
+  - name: Account
+    description: Cash / deposit account, keyed by IBAN.
+    fields: [iban, account_id]
+  - name: AccountTransaction
+    description: Cash movement on an account.
+    fields: [account_id, transfer]
+  - name: Liability
+    description: Debt / credit obligation (Credit, Loan, Confirming).
+    fields: [liability_id, balance, type]
+  - name: LiabilityTransaction
+    description: Debt payment or change.
+    fields: [liability_id]
+  - name: Card
+    description: Payment card, PAN masked except last four.
+    fields: [card_id, pan]
+  - name: CardTransaction
+    description: Card purchase or charge.
+    fields: [card_id]
+  - name: Identity
+    description: Credential-owner profile with contact info and address.
+    fields: [_id, contactInfo, address]
+  - name: Holder
+    description: Account / product participant with relationship type (Titular, Autorizado).
+    fields: [product_id, rel]
+  - name: Entity
+    description: Financial institution referenced across all products.
+    fields: [entity]
+  - name: Credential
+    description: Authentication container; basis for external_id across entities.
+    fields: [external_id]
+relationships:
+  - from: Portfolio
+    to: Investment
+    type: has_many
+    via: portfolio_id
+  - from: Investment
+    to: InvestmentTransaction
+    type: has_many
+    via: investment_id
+  - from: Portfolio
+    to: Account
+    type: references
+    via: refAccount/refAccounts (IBAN)
+  - from: Account
+    to: AccountTransaction
+    type: has_many
+    via: account_id
+  - from: Liability
+    to: LiabilityTransaction
+    type: has_many
+    via: liability_id
+  - from: Card
+    to: CardTransaction
+    type: has_many
+    via: card_id
+  - from: Holder
+    to: Portfolio
+    type: references
+    via: product_id
