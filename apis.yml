@@ -92,6 +92,8 @@ apis:
   - type: GettingStarted
     url: https://docs.flanks.io/pages/integration-example/
 common:
+- type: Website
+  url: https://www.flanks.io/
 - type: DeveloperPortal
   url: https://docs.flanks.io/
 - type: Documentation
